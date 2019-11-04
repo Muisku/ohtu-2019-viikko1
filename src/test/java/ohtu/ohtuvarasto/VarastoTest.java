@@ -32,11 +32,21 @@ public class VarastoTest {
         varasto = new Varasto(0, 2);
         assertEquals(0, varasto.getTilavuus(), vertailuTarkkuus);
         assertEquals(0, varasto.getSaldo(), vertailuTarkkuus);
+        varasto = new Varasto(0, -1);
+        assertEquals(0, varasto.getSaldo(), vertailuTarkkuus);
         
     }
     @Test
-    public void konstruktoriLuoTyhjanVaraston() {
-        assertEquals(0, varasto.getSaldo(), vertailuTarkkuus);
+    public void lisaaVarastoonMaaraNolla() {
+        varasto = new Varasto(1, 1);
+        varasto.lisaaVarastoon(-1);
+        assertEquals(1, varasto.getSaldo(), vertailuTarkkuus);
+    }
+   
+    @Test
+    public void ylimaarainenHukkaan() {
+        varasto = new Varasto(2, 4);
+        assertEquals(2, varasto.getSaldo(), vertailuTarkkuus);
     }
 
     @Test
