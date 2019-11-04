@@ -60,8 +60,13 @@ public class VarastoTest {
     public void otaVarastostaPikaPoistuminen() {
         varasto = new Varasto(10, 5);
         assertEquals(0.0, varasto.otaVarastosta(-2), vertailuTarkkuus);
-        varasto = new Varasto(10, 5);
-        assertEquals(0, varasto.otaVarastosta(6), vertailuTarkkuus);
+       
+        
+    }
+    @Test
+    public void otaVarastostaTyhjenee() {
+       varasto = new Varasto(10, 5);
+        assertEquals(0, varasto.otaVarastosta(6), vertailuTarkkuus); 
         
     }
     
