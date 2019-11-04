@@ -63,7 +63,12 @@ public class VarastoTest {
        
         
     }
-   
+    @Test
+    public void otaVarastostaTyhjenee() {
+       varasto = new Varasto(10, 5);
+        assertEquals(5, varasto.otaVarastosta(6), vertailuTarkkuus); 
+        
+    }
     
 
     @Test
