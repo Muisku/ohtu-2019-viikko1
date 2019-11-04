@@ -72,7 +72,7 @@ public class VarastoTest {
     @Test
     public void merkkiJono() {
        varasto = new Varasto(10, 5);
-        assertEquals("saldo = " + 5 + ",vielä tilaa " + 5, varasto.toString(), vertailuTarkkuus); 
+        assertEquals("saldo = " + 5 + ", vielä tilaa " + 5, varasto.toString(), vertailuTarkkuus); 
         
     }
     
