@@ -45,9 +45,26 @@ public class VarastoTest {
    
     @Test
     public void ylimaarainenHukkaan() {
-        varasto = new Varasto(2, 4);
+        varasto = new Varasto(2, 1);
+        varasto.lisaaVarastoon(2);
         assertEquals(2, varasto.getSaldo(), vertailuTarkkuus);
     }
+    
+    @Test
+    public void lisaaVarastoonYlimaarainenHukkaan() {
+        varasto = new Varasto(10, 0);
+        varasto.lisaaVarastoon(15);
+        assertEquals(10, varasto.getSaldo(), vertailuTarkkuus);
+    }
+    @Test
+    public void otaVarastostaPikaPoistuminen() {
+        varasto = new Varasto(10, 5);
+        assertEquals(0.0, varasto.otaVarastosta(-2), vertailuTarkkuus);
+        varasto = new Varasto(10, 5);
+        assertEquals(0, varasto.otaVarastosta(6), vertailuTarkkuus);
+        
+    }
+    
 
     @Test
     public void uudellaVarastollaOikeaTilavuus() {
