@@ -1,2 +1,0 @@
-eka lisays
-git add -p lisayssss

@@ -1,2 +1,0 @@
-ensimmäinen muutos
-git add -p muutos
