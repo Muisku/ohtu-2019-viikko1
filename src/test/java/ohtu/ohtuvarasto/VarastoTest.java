@@ -27,13 +27,13 @@ public class VarastoTest {
     @Test
     public void tilavuusNollaTaiNegatiivinen() {
         varasto = new Varasto(2, 1);
-        assertEquals(2, varasto.getTilavuus(), vertailuTarkkuus);
-        assertEquals(1, varasto.getSaldo(), vertailuTarkkuus);
+        assertEquals(1, varasto.getTilavuus(), vertailuTarkkuus);
+        assertEquals(0, varasto.getSaldo(), vertailuTarkkuus);
         varasto = new Varasto(0, 2);
-        assertEquals(0, varasto.getTilavuus(), vertailuTarkkuus);
-        assertEquals(0, varasto.getSaldo(), vertailuTarkkuus);
+        assertEquals(1, varasto.getTilavuus(), vertailuTarkkuus);
+        assertEquals(3, varasto.getSaldo(), vertailuTarkkuus);
         varasto = new Varasto(0, -1);
-        assertEquals(0, varasto.getSaldo(), vertailuTarkkuus);
+        assertEquals(1, varasto.getSaldo(), vertailuTarkkuus);
         
     }
     @Test
