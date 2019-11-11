@@ -82,7 +82,7 @@ public class VarastoTest {
         varasto.lisaaVarastoon(7);
 
         // saldon pitäisi olla sama kun lisätty määrä
-        assertEquals(8, varasto.getSaldo(), vertailuTarkkuus);
+        assertEquals(7, varasto.getSaldo(), vertailuTarkkuus);
     }
 
     @Test
